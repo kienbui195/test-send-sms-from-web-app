@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="sms-button">Gửi tin nhắn</button>
+  <script>
+    document.getElementById('sms-button').addEventListener('click', function () {
+      var phoneNumber = '0123456789';  // Số điện thoại người nhận
+      var message = 'Đây là tin nhắn được soạn sẵn';
+      var smsUrl = `sms:${phoneNumber}?body=${encodeURIComponent(message)}`;
+
+      window.location.href = smsUrl;
+    });
+  </script>
+</body>
+
+</html>
